@@ -100,6 +100,17 @@ int main() {
             default: // Invalid choice
                 cout << "Invalid choice. Please select again." << endl;
         }
+
+        // Ask if the user wants to perform another operation
+        if (running) {
+            char anotherOperation;
+            cout << "Do you want to perform another operation? (y/n): ";
+            cin >> anotherOperation;
+            if (anotherOperation != 'y' && anotherOperation != 'Y') {
+                running = false; // End the loop if the user does not want to continue
+            }
+        }
+
         cout << endl;  // Add a blank line for spacing
     }
 
